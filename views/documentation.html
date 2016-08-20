@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Documentation</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Documentation
+      </h1>
+    </header>
+
+    <main>
+      <table>
+          <tr>
+            <th>Verb</th>
+            <th>Path</th> 
+            <th>Header</th>
+            <th>Body</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/dreams</td> 
+            <td>none</td>
+            <td>none</td>
+            <td>Returns list of dreams with their URIs</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/dreams/{dreamId}</td> 
+            <td>Accept: application/json</td>
+            <td>none</td>
+            <td>Returns the dream at the supplied location</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/dreams</td> 
+            <td>Content-Type: application/json</td>
+            <td>{"dream": "newDream"}</td>
+            <td>Adds new dream to the list</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/dreams?dream={newDream}</td> 
+            <td>none</td>
+            <td>none</td>
+            <td>Adds new dream to the list</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>/dreams/{dreamId}</td> 
+            <td>Content-Type: application/json</td>
+            <td>{"dream": "newDream"}</td>
+            <td>Overrides the dream at the supplied location</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>/dreams/{dreamId}</td> 
+            <td>Authorization: Basic {authToken}</td>
+            <td>none</td>
+            <td>Deleted the dream at the supplied location</td>
+          </tr>
+      </table>
+      <br />
+      <button onclick="window.location='https://petal-spirit.hyperdev.space/';">Back to dreams</button>
+    </main>    
+    
+    <footer>
+    </footer>
+    
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
